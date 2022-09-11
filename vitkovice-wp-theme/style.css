@@ -1,0 +1,21 @@
+/*
+ Theme Name:    Vítkovice
+ Theme URI:
+ Description:   Vítkovice ski school web theme
+ Author:        Martin Škarabela
+ Author URI:
+ Version:       1.0.0
+ License:
+ License URI:
+ Tags:
+ Text Domain:
+*/
+
+.text-justify {
+    text-align: justify;
+}
+
+#addressMapContainer {
+    width: 100%;
+    height: 300px;
+}
