@@ -1,5 +1,6 @@
 <?php
     define("_ROOT_DIR", "/vitkovice-wp-theme");
+    define("_ROOT_URL", "/vitkovice");
 
     function vitkovice_resources() {
         wp_enqueue_style("bootstrap.min", get_stylesheet_directory_uri()."/css/bootstrap/bootstrap.min.css");
@@ -14,6 +15,11 @@
 
     function vitkivice_post_excerpt_length($length) {
         return $length + 20;
+    }
+
+    function get_id_by_slug($page_slug) {
+        $page = get_page_by_path($page_slug);
+        return $page ? $page->ID : null;
     }
 
     add_filter("excerpt_length", "vitkivice_post_excerpt_length", 999);

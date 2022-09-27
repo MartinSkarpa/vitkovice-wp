@@ -55,7 +55,7 @@
 ?>
 
                 <div class="col-12">
-                    <a href="#" class="btn btn-primary">Starší příspěvky</a><!--TODO-->
+                    <a href="<?php echo get_page_link(get_id_by_slug('/news-archive')); ?>" class="btn btn-primary">Starší příspěvky</a><!--TODO-->
                 </div>
             </div>
         </section>
