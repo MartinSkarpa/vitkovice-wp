@@ -41,7 +41,7 @@
         $postCount++;
     }
 
-    if (!have_posts()) {
+    if (!$instructorsQuery->have_posts()) {
         echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
     }
 ?>
