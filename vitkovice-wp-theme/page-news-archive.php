@@ -10,7 +10,7 @@
 <?php
     $paged = get_query_var("paged") ? get_query_var("paged") : 1;
     $newsQueryArgs = [
-        "category_name"     => "news",
+        "category_name"     => _NEWS,
         //"posts_per_page"    => 10,
         "paged"             => $paged
     ];

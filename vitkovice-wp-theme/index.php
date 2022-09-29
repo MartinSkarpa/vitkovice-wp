@@ -27,7 +27,7 @@
             <div class="row">
 <?php
     $newsQueryArgs = [
-        "category_name" => "news",
+        "category_name" => _NEWS,
         "posts_per_page" => 3
     ];
     $newsQuery = new WP_Query($newsQueryArgs);
@@ -64,7 +64,7 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue.
             </p>
-            <div id="sectionKidsParkImgContainer" class="row">
+            <!--<div id="sectionKidsParkImgContainer" class="row">
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                     <svg class="img-fluid rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="5%" y="50%" fill="#dee2e6" dy=".3em">Responsive image</text></svg>
                 </div>
@@ -86,94 +86,69 @@
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                     <svg class="img-fluid rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="5%" y="50%" fill="#dee2e6" dy=".3em">Responsive image</text></svg>
                 </div>
-            </div>
+            </div>-->
         </section>
         <section id="sectionOurInstructors" class="col-12 py-3 bg-light">
             <h1>Instruktoři</h1><!--TODO-->
             <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue.
+                <!-- TODO -->
+                <?php echo category_description(get_category_id_by_slug(_INSTRUCTORS)); ?>
             </p>
             <div class="row">
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
+<?php
+    $instructorsQueryArgs = [
+        "category_name" => _INSTRUCTORS,
+        "posts_per_page" => 6
+    ];
+    $instructorsQuery = new WP_Query($instructorsQueryArgs);
+    $postCount = 1;
+    while ($instructorsQuery->have_posts()) {
+        $instructorsQuery->the_post();
+        $displayClasses = "";
+        switch ($postCount) {
+            case 3:
+                $displayClasses = "d-none d-md-block";
+                break;
+            case 4:
+                $displayClasses = "d-none d-lg-block";
+                break;
+            case 5:
+            case 6:
+                $displayClasses = "d-none d-xxl-block";
+                break;
+        }
+?>
+                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3 <?php echo $displayClasses; ?>">
                     <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor one"/>
+<?php
+        if (has_post_thumbnail()) {
+            the_post_thumbnail(array(300, 150), array("class" => "card-img-top", "alt" => get_the_title()));
+        } else {
+?>
+                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="<?php the_title(); ?>"/>
+<?php
+        }
+?>
                         <div class="card-body">
-                            <h2 class="h4">Instructor one</h2>
+                            <h2 class="h4"><?php the_title(); ?></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
+                                <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="#">Přejít do profilu >></a>
+                                <a href="<?php the_permalink(); ?>">Přejít do profilu >></a><!--TODO--><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
-                    <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor two"/>
-                        <div class="card-body">
-                            <h2 class="h4">Instructor two</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
-                                <br/>
-                                <a href="#">Přejít do profilu >></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3 d-none d-md-block">
-                    <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor three"/>
-                        <div class="card-body">
-                            <h2 class="h4">Instructor three</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
-                                <br/>
-                                <a href="#">Přejít do profilu >></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3 d-none d-lg-block">
-                    <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor four"/>
-                        <div class="card-body">
-                            <h2 class="h4">Instructor four</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
-                                <br/>
-                                <a href="#">Přejít do profilu >></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3 d-none d-xxl-block">
-                    <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor five-o"/>
-                        <div class="card-body">
-                            <h2 class="h4">Instructor five-o</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
-                                <br/>
-                                <a href="#">Přejít do profilu >></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3 d-none d-xxl-block">
-                    <div class="card">
-                        <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/instructor.jpg" class="card-img-top" alt="Instructor six"/>
-                        <div class="card-body">
-                            <h2 class="h4">Instructor six</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit.
-                                <br/>
-                                <a href="#">Přejít do profilu >></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<?php
+        $postCount++;
+    }
+
+    if (!have_posts()) {
+        echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
+    }
+?>
                 <div class="col-12">
-                    <a href="#" class="btn btn-primary">Další instruktoři</a>
+                    <a href="<?php echo get_page_link(get_id_by_slug('/all-instructors')); ?>" class="btn btn-primary">Další instruktoři</a>
                 </div>
             </div>
         </section>

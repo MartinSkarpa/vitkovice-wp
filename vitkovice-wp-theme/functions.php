@@ -2,6 +2,10 @@
     define("_ROOT_DIR", "/vitkovice-wp-theme");
     define("_ROOT_URL", "/vitkovice");
 
+    // Category names
+    define("_NEWS", "news");
+    define("_INSTRUCTORS", "instructors");
+
     function vitkovice_resources() {
         wp_enqueue_style("bootstrap.min", get_stylesheet_directory_uri()."/css/bootstrap/bootstrap.min.css");
         wp_enqueue_style("bootstrap-icons", get_stylesheet_directory_uri()."/font/bootstrap-icons.css");
@@ -20,6 +24,11 @@
     function get_id_by_slug($page_slug) {
         $page = get_page_by_path($page_slug);
         return $page ? $page->ID : null;
+    }
+
+    function get_category_id_by_slug($categorySlug) {
+        $category = get_category_by_slug($categorySlug);
+        return $category ? $category->term_id : null;
     }
 
     add_filter("excerpt_length", "vitkivice_post_excerpt_length", 999);
