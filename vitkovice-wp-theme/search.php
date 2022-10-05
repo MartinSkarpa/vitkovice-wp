@@ -7,10 +7,10 @@
         <header class="page-header alignwide">
             <h1 class="page-title">
 <?php
-    //TODO
     printf(
         /* translators: %s: Search term. */
-        esc_html__( 'Results for "%s"', 'twentytwentyone' ),
+        //esc_html__( 'Results for "%s"', 'twentytwentyone' ),
+	    esc_html__( 'Výsledky pro "%s"', 'twentytwentyone' ),
         '<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
     );
 ?>
@@ -19,13 +19,14 @@
 
         <div class="search-result-count default-max-width">
 <?php
-    //TODO
     printf(
         esc_html(
             /* translators: %d: The number of search results. */
             _n(
-                'We found %d result for your search.',
-                'We found %d results for your search.',
+                //'We found %d result for your search.',
+                //'We found %d results for your search.',
+	            'Nalezen %d výsledek pro vaše hledání.',
+	            'Nalezen %d výsledeků pro vaše hledání.',
                 (int) $wp_query->found_posts,
                 'twentytwentyone'
             )
@@ -48,7 +49,7 @@
                 <div class="text-justify">
                     <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                     <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                    <a href="<?php the_permalink(); ?>" class="">Číst dále....</a><!--TODO--><!--TODO Spravny odkaz-->
+                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále...."); ?></a><!--TODO Spravny odkaz-->
                 </div>
             </article>
             <div class="mb-3 w-100"></div>
@@ -58,7 +59,7 @@
     }
 
     if (!have_posts()) {
-        echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
+        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
     }
 ?>
         </div>

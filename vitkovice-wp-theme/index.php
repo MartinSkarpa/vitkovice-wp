@@ -3,7 +3,7 @@
 <main class="container bg-white">
     <div class="row">
         <section id="sectionAboutUs" class="col-12 py-3 mt-5">
-            <h1>O nás</h1><!--TODO-->
+            <h1><?php _e("O nás"); ?></h1>
             <!--TODO Vyřeš problikávání kolotoče-->
             <div class="carousel carousel-fade slide">
                 <div class="carousel-inner" data-bs-ride="carousel">
@@ -23,7 +23,7 @@
             </p>
         </section>
         <section id="sectionNews" class="col-12 py-3 bg-light">
-            <h1>Novinky</h1><!--TODO-->
+            <h1><?php _e("Novinky"); ?></h1>
             <div class="row">
 <?php
     $newsQueryArgs = [
@@ -41,7 +41,7 @@
                     <div class="text-justify">
                         <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                         <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                        <a href="<?php the_permalink(); ?>" class="">Číst dále....</a><!--TODO--><!--TODO Spravny odkaz-->
+                        <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále...."); ?></a><!--TODO Spravny odkaz-->
                     </div>
                 </article>
                 <div class="mb-3 w-100"></div>
@@ -50,7 +50,7 @@
     }
 
     if (!$newsQuery->have_posts()) {
-        echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
+        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
     }
 ?>
 
@@ -60,7 +60,7 @@
             </div>
         </section>
         <section id="sectionKidsPark" class="col-12 py-3 ">
-            <h1>Dětský park</h1><!--TODO-->
+            <h1><?php _e("Dětský park"); ?></h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue.
             </p>
@@ -89,7 +89,7 @@
             </div>-->
         </section>
         <section id="sectionOurInstructors" class="col-12 py-3 bg-light">
-            <h1>Instruktoři</h1><!--TODO-->
+            <h1><?php _e("Instruktoři"); ?></h1>
             <p>
                 <!-- TODO -->
                 <?php echo category_description(get_category_id_by_slug(_INSTRUCTORS)); ?>
@@ -134,7 +134,7 @@
                             <p>
                                 <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="<?php the_permalink(); ?>">Přejít do profilu >></a><!--TODO--><!--TODO Spravny odkaz-->
+                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>"); ?></a><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
     }
 
     if (!$instructorsQuery->have_posts()) {
-        echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
+        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
     }
 ?>
                 <div class="col-12">
@@ -153,7 +153,7 @@
             </div>
         </section>
         <section id="sectionPricing" class="col-12 py-3 ">
-            <h1>Ceník</h1><!--TODO-->
+            <h1><?php _e("Ceník"); ?></h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
             </p>
@@ -185,18 +185,18 @@
             </table>
         </section>
         <section id="sectionContact" class="col-12 py-3 bg-light">
-            <h1>Kontakt</h1><!--TODO-->
+            <h1><?php _e("Kontakt"); ?></h1>
             <div class="row">
                 <div class="col-12 col-md-6">
                     <address class="col-12">
-                        <h2 class="h3"><i class="bi bi-geo-alt-fill me-3"></i>Adresa</h2><!--TODO-->
+                        <h2 class="h3"><i class="bi bi-geo-alt-fill me-3"></i><?php _e("Adresa"); ?></h2>
                         Imaginární 123<br/>
                         Kocourkov<br/>
                         543 21<br/>
                         Za sedmero horami
                     </address>
                     <address class="col-12 col-lg-10 offset-lg-2 text-start text-lg-end">
-                        <h2 class="h3"><i class="bi bi-telephone-fill me-3 d-lg-none"></i>Odpovědný vedoucí<i class="bi bi-telephone-fill ms-3 d-none d-lg-inline-block"></i></h2><!--TODO-->
+                        <h2 class="h3"><i class="bi bi-telephone-fill me-3 d-lg-none"></i><?php _e("Odpovědný vedoucí"); ?><i class="bi bi-telephone-fill ms-3 d-none d-lg-inline-block"></i></h2>
                         John Doe<br/>
                         +420 123 456 789
                     </address>

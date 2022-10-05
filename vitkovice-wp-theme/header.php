@@ -22,28 +22,28 @@
     if (is_home()) {
 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionAboutUs">O nás</a><!--TODO-->
+                        <a class="nav-link" href="#sectionAboutUs"><?php _e("O nás"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionNews">Novinky</a><!--TODO-->
+                        <a class="nav-link" href="#sectionNews"><?php _e("Novinky"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionKidsPark">Dětský park</a><!--TODO-->
+                        <a class="nav-link" href="#sectionKidsPark"><?php _e("Dětský park"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionOurInstructors">Instruktoři</a><!--TODO-->
+                        <a class="nav-link" href="#sectionOurInstructors"><?php _e("Instruktoři"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionPricing">Ceník</a><!--TODO-->
+                        <a class="nav-link" href="#sectionPricing"><?php _e("Ceník"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionContact">Kontakt</a><!--TODO-->
+                        <a class="nav-link" href="#sectionContact"><?php _e("Kontakt"); ?></a>
                     </li>
 <?php
     } else {
 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo get_home_url(); ?>">Home</a><!--TODO-->
+                        <a class="nav-link" href="<?php echo get_home_url(); ?>"><?php _e("Home"); ?></a>
                     </li>
 <?php
     }

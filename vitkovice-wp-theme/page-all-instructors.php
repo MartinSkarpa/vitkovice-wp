@@ -32,7 +32,7 @@
                             <p>
                                 <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="<?php the_permalink(); ?>">Přejít do profilu >></a><!--TODO--><!--TODO Spravny odkaz-->
+                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>"); ?></a><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
     }
 
     if (!$instructorsQuery->have_posts()) {
-        echo "<p>Nebyl nalezen žádný obsah.</p>";//TODO
+        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
     }
 ?>
         </div>
