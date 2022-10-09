@@ -49,7 +49,7 @@
     }
 ?>
                 </ul>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mt-4 mt-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php echo _LANG_SHORTCUTS[determine_locale()]; ?>
