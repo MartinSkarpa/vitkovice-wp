@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="p-3 mt-5">
+    <section id="" class="py-3 mt-5">
         <!--TODO Breadcrumbs-->
 
 <?php
@@ -24,10 +24,10 @@
 
         wp_link_pages(
             array(
-                'before'   => '<nav class="page-links" aria-label="' . /* esc_attr__( 'Page', 'twentytwentyone' ) */ "blah" . '">',
+                'before'   => '<nav class="page-links" aria-label="' . /* esc_attr__( 'Page', "vitkovice-wp-theme" ) */ "blah" . '">',
                 'after'    => '</nav>',
                 /* translators: %: Page number. */
-                'pagelink' => /* esc_html__( 'Page %', 'twentytwentyone' ) */ "blah",
+                'pagelink' => /* esc_html__( 'Page %', "vitkovice-wp-theme" ) */ "blah",
             )
         );
 ?>
@@ -42,11 +42,11 @@
 
         // Previous/next post navigation.
         /* the_post_navigation(array(
-            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'twentyfifteen') . '</span> ' .
-                '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
+            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', "vitkovice-wp-theme") . '</span> ' .
+                '<span class="screen-reader-text">' . __('Next post:', "vitkovice-wp-theme") . '</span> ' .
                 '<span class="post-title">%title</span>',
-            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'twentyfifteen') . '</span> ' .
-                '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
+            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', "vitkovice-wp-theme") . '</span> ' .
+                '<span class="screen-reader-text">' . __('Previous post:', "vitkovice-wp-theme") . '</span> ' .
                 '<span class="post-title">%title</span>',
         )); */
     }

@@ -17,39 +17,60 @@
             </button>
 
             <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarLinks">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav text-nowrap <?php if (is_home()) echo "navbar-nav-scroll"; ?>">
 <?php
     if (is_home()) {
 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionAboutUs"><?php _e("O nás"); ?></a>
+                        <a class="nav-link" href="#sectionAboutUs"><?php _e("O nás", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionNews"><?php _e("Novinky"); ?></a>
+                        <a class="nav-link" href="#sectionNews"><?php _e("Novinky", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionKidsPark"><?php _e("Dětský park"); ?></a>
+                        <a class="nav-link" href="#sectionKidsPark"><?php _e("Dětský park", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionOurInstructors"><?php _e("Instruktoři"); ?></a>
+                        <a class="nav-link" href="#sectionOurInstructors"><?php _e("Instruktoři", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionPricing"><?php _e("Ceník"); ?></a>
+                        <a class="nav-link" href="#sectionPricing"><?php _e("Ceník", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionContact"><?php _e("Kontakt"); ?></a>
+                        <a class="nav-link" href="#sectionContact"><?php _e("Kontakt", "vitkovice-wp-theme"); ?></a>
                     </li>
 <?php
     } else {
 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo get_home_url(); ?>"><?php _e("Home"); ?></a>
+                        <a class="nav-link" href="<?php echo get_home_url(); ?>"><?php _e("Home", "vitkovice-wp-theme"); ?></a>
                     </li>
 <?php
     }
 ?>
                 </ul>
-                <?php get_search_form(); ?>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?php echo _LANG_SHORTCUTS[determine_locale()]; ?>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="<?php echo home_url()."?lang=en_US"; ?>">
+                                    <?php echo _LANG_SHORTCUTS["en_US"] ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="<?php echo home_url()."?lang=cs_CZ"; ?>">
+                                    <?php echo _LANG_SHORTCUTS["cs_CZ"] ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+	                    <?php get_search_form(); ?>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

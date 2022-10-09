@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="p-3 mt-5">
+    <section id="" class="py-3 mt-5">
         <!--TODO Breadcrumbs-->
 
         <div class="row">
@@ -26,7 +26,7 @@
                 <div class="text-justify">
                     <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                     <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále...."); ?></a><!--TODO Spravny odkaz-->
+                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                 </div>
             </article>
             <div class="mb-3 w-100"></div>
@@ -60,7 +60,7 @@
     }
 
     if (!$newsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
+        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
     }
 ?>
         </div>

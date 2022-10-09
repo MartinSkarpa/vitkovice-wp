@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="p-3 mt-5">
+    <section id="" class="py-3 mt-5">
         <!--TODO Breadcrumbs-->
 
         <header class="page-header alignwide">
@@ -9,8 +9,8 @@
 <?php
     printf(
         /* translators: %s: Search term. */
-        //esc_html__( 'Results for "%s"', 'twentytwentyone' ),
-	    esc_html__( 'Výsledky pro "%s"', 'twentytwentyone' ),
+        //esc_html__( 'Results for "%s"', "vitkovice-wp-theme"),
+	    esc_html__( 'Výsledky pro "%s"', "vitkovice-wp-theme"),
         '<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
     );
 ?>
@@ -28,7 +28,7 @@
 	            'Nalezen %d výsledek pro vaše hledání.',
 	            'Nalezen %d výsledeků pro vaše hledání.',
                 (int) $wp_query->found_posts,
-                'twentytwentyone'
+	            "vitkovice-wp-theme"
             )
         ),
         (int) $wp_query->found_posts
@@ -49,7 +49,7 @@
                 <div class="text-justify">
                     <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                     <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále...."); ?></a><!--TODO Spravny odkaz-->
+                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                 </div>
             </article>
             <div class="mb-3 w-100"></div>
@@ -59,7 +59,7 @@
     }
 
     if (!have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
+        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
     }
 ?>
         </div>

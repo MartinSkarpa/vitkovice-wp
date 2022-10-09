@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="p-3 mt-5">
+    <section id="" class="py-3 mt-5">
         <!--TODO Breadcrumbs-->
 
         <div class="row">
@@ -32,7 +32,7 @@
                             <p>
                                 <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>"); ?></a><!--TODO Spravny odkaz-->
+                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
     }
 
     if (!$instructorsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.")."</p>";
+        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
     }
 ?>
         </div>

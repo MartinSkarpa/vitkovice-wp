@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="p-3 mt-5">
+    <section id="" class="py-3 mt-5">
         <!--TODO Breadcrumbs-->
 
 <?php
@@ -17,10 +17,10 @@
 
         wp_link_pages(
             array(
-                'before'   => '<nav class="page-links" aria-label="' . /* esc_attr__( 'Page', 'twentytwentyone' ) */ "blah" . '">',
+                'before'   => '<nav class="page-links" aria-label="' . /* esc_attr__( 'Page', "vitkovice-wp-theme" ) */ "blah" . '">',
                 'after'    => '</nav>',
                 /* translators: %: Page number. */
-                'pagelink' => /* esc_html__( 'Page %', 'twentytwentyone' ) */ "blah",
+                'pagelink' => /* esc_html__( 'Page %', "vitkovice-wp-theme" ) */ "blah",
             )
         );
 ?>
