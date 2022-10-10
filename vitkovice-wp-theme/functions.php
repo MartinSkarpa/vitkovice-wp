@@ -39,8 +39,9 @@ function get_category_id_by_slug( $categorySlug ) {
 	return $category ? $category->term_id : null;
 }
 
-// TODO Zprovoznit přepínání jazyků (jazyky jsou též nejspíš prohozené)
+// TODO Jazyky jsou též nejspíš prohozené
 function redefine_locale( $locale ) {
+	session_start();
 	if ( isset( $_GET["lang"] ) ) {
 		$locale           = $_GET["lang"];
 		$_SESSION["lang"] = $locale;
