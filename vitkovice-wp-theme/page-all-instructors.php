@@ -8,7 +8,7 @@
         <div class="row">
 <?php
     $instructorsQueryArgs = [
-        "category_name" => _INSTRUCTORS,
+        "category_name" => _INSTRUCTORS."+".determine_locale(),
         "posts_per_page" => -1
     ];
     $instructorsQuery = new WP_Query($instructorsQueryArgs);

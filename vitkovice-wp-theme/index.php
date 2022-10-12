@@ -27,7 +27,7 @@
             <div class="row">
 <?php
     $newsQueryArgs = [
-        "category_name" => _NEWS,
+        "category_name" => _NEWS."+".determine_locale(),
         "posts_per_page" => 3
     ];
     $newsQuery = new WP_Query($newsQueryArgs);
@@ -99,7 +99,7 @@
             <div class="row">
 <?php
     $instructorsQueryArgs = [
-        "category_name" => _INSTRUCTORS,
+        "category_name" => _INSTRUCTORS."+".determine_locale(),
         "posts_per_page" => 6
     ];
     $instructorsQuery = new WP_Query($instructorsQueryArgs);
