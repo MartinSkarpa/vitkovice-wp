@@ -39,7 +39,6 @@ function get_category_id_by_slug( $categorySlug ) {
 	return $category ? $category->term_id : null;
 }
 
-// TODO Jazyky jsou též nejspíš prohozené
 function redefine_locale( $locale ) {
 	session_start();
 	if ( isset( $_GET["lang"] ) ) {
@@ -53,7 +52,7 @@ function redefine_locale( $locale ) {
 }
 
 add_filter( "locale", "redefine_locale", 10 );
-//load_theme_textdomain("vitkovice-wp-theme", get_template_directory()."/lang");
+load_theme_textdomain( "vitkovice-wp-theme", get_stylesheet_directory() . "/lang" );
 load_child_theme_textdomain( "vitkovice-wp-theme", get_stylesheet_directory() . "/lang" );
 add_filter( "excerpt_length", "vitkivice_post_excerpt_length", 999 );
 add_action( "wp_enqueue_scripts", "remove_parent_styles", 20 );

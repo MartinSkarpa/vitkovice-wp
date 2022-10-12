@@ -22,22 +22,22 @@
     if (is_home()) {
 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionAboutUs"><?php _e("O nás", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionAboutUs"><?php _e("About us", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionNews"><?php _e("Novinky", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionNews"><?php _e("News", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionKidsPark"><?php _e("Dětský park", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionKidsPark"><?php _e("Kindergarten", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionOurInstructors"><?php _e("Instruktoři", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionOurInstructors"><?php _e("Instructors", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionPricing"><?php _e("Ceník", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionPricing"><?php _e("Price list", "vitkovice-wp-theme"); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sectionContact"><?php _e("Kontakt", "vitkovice-wp-theme"); ?></a>
+                        <a class="nav-link" href="#sectionContact"><?php _e("Contact us", "vitkovice-wp-theme"); ?></a>
                     </li>
 <?php
     } else {

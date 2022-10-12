@@ -26,7 +26,7 @@
                 <div class="text-justify">
                     <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                     <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
+                    <a href="<?php the_permalink(); ?>" class=""><?php _e("Read more....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                 </div>
             </article>
             <div class="mb-3 w-100"></div>
@@ -47,6 +47,7 @@
 ?>
             <ul class="pagination">
 <?php
+        // TODO Translate pagination
         foreach ($pagination as $key => $page_link ) {
 ?>
                 <li class="page-item <?php if ( strpos( $page_link, 'current' ) !== false ) echo ' active'; ?>">
@@ -60,7 +61,7 @@
     }
 
     if (!$newsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
+        echo "<p>".__("No content found.", "vitkovice-wp-theme")."</p>";
     }
 ?>
         </div>

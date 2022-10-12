@@ -32,7 +32,7 @@
                             <p>
                                 <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
+                                <a href="<?php the_permalink(); ?>"><?php _e("Into the profile >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
     }
 
     if (!$instructorsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
+        echo "<p>".__("No content found.", "vitkovice-wp-theme")."</p>";
     }
 ?>
         </div>

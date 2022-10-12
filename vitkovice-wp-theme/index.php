@@ -3,7 +3,7 @@
 <main class="container bg-white">
     <div class="row">
         <section id="sectionAboutUs" class="col-12 py-3 mt-5">
-            <h1><?php _e("O nás", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("About us", "vitkovice-wp-theme"); ?></h1>
             <!--TODO Vyřeš problikávání kolotoče-->
             <div class="carousel carousel-fade slide">
                 <div class="carousel-inner" data-bs-ride="carousel">
@@ -23,7 +23,7 @@
             </p>
         </section>
         <section id="sectionNews" class="col-12 py-3 bg-light">
-            <h1><?php _e("Novinky", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("News", "vitkovice-wp-theme"); ?></h1>
             <div class="row">
 <?php
     $newsQueryArgs = [
@@ -41,7 +41,7 @@
                     <div class="text-justify">
                         <?php the_post_thumbnail(array(100, 100), array("class" => "rounded mb-3 ".($isEven ? "ms-3 float-end" : "me-3 float-start"))); ?>
                         <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                        <a href="<?php the_permalink(); ?>" class=""><?php _e("Číst dále....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
+                        <a href="<?php the_permalink(); ?>" class=""><?php _e("Read more....", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                     </div>
                 </article>
                 <div class="mb-3 w-100"></div>
@@ -50,17 +50,19 @@
     }
 
     if (!$newsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
+        echo "<p>".__("No content found.", "vitkovice-wp-theme")."</p>";
     }
 ?>
 
                 <div class="col-12">
-                    <a href="<?php echo get_page_link(get_id_by_slug('/news-archive')); ?>" class="btn btn-primary">Starší příspěvky</a><!--TODO-->
+                    <a href="<?php echo get_page_link(get_id_by_slug('/news-archive')); ?>" class="btn btn-primary">
+                        <?php _e("Older posts", "vitkovice-wp-theme"); ?>
+                    </a>
                 </div>
             </div>
         </section>
         <section id="sectionKidsPark" class="col-12 py-3 ">
-            <h1><?php _e("Dětský park", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("Kindergarten", "vitkovice-wp-theme"); ?></h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue.
             </p>
@@ -89,7 +91,7 @@
             </div>-->
         </section>
         <section id="sectionOurInstructors" class="col-12 py-3 bg-light">
-            <h1><?php _e("Instruktoři", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("Instructors", "vitkovice-wp-theme"); ?></h1>
             <p>
                 <!-- TODO -->
                 <?php echo category_description(get_category_id_by_slug(_INSTRUCTORS)); ?>
@@ -134,7 +136,7 @@
                             <p>
                                 <?php the_excerpt(); ?><!--TODO Zarovnat text-->
                                 <br/>
-                                <a href="<?php the_permalink(); ?>"><?php _e("Přejít do profilu >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
+                                <a href="<?php the_permalink(); ?>"><?php _e("Into the profile >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                             </p>
                         </div>
                     </div>
@@ -144,16 +146,18 @@
     }
 
     if (!$instructorsQuery->have_posts()) {
-        echo "<p>".__("Nebyl nalezen žádný obsah.", "vitkovice-wp-theme")."</p>";
+        echo "<p>".__("No content found.", "vitkovice-wp-theme")."</p>";
     }
 ?>
                 <div class="col-12">
-                    <a href="<?php echo get_page_link(get_id_by_slug('/all-instructors')); ?>" class="btn btn-primary">Další instruktoři</a>
+                    <a href="<?php echo get_page_link(get_id_by_slug('/all-instructors')); ?>" class="btn btn-primary">
+                        <?php _e("Other instructors", "vitkovice-wp-theme"); ?>
+                    </a>
                 </div>
             </div>
         </section>
         <section id="sectionPricing" class="col-12 py-3 ">
-            <h1><?php _e("Ceník", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("Price list", "vitkovice-wp-theme"); ?></h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis gravida nulla. In rutrum. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean id metus id velit ullamcorper pulvinar. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aliquam erat volutpat. Etiam quis quam. Fusce aliquam vestibulum ipsum. Nulla quis diam. Mauris dictum facilisis augue. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
             </p>
@@ -185,18 +189,18 @@
             </table>
         </section>
         <section id="sectionContact" class="col-12 py-3 bg-light">
-            <h1><?php _e("Kontakt", "vitkovice-wp-theme"); ?></h1>
+            <h1><?php _e("Contact us", "vitkovice-wp-theme"); ?></h1>
             <div class="row">
                 <div class="col-12 col-md-6">
                     <address class="col-12">
-                        <h2 class="h3"><i class="bi bi-geo-alt-fill me-3"></i><?php _e("Adresa", "vitkovice-wp-theme"); ?></h2>
+                        <h2 class="h3"><i class="bi bi-geo-alt-fill me-3"></i><?php _e("Address", "vitkovice-wp-theme"); ?></h2>
                         Imaginární 123<br/>
                         Kocourkov<br/>
                         543 21<br/>
                         Za sedmero horami
                     </address>
                     <address class="col-12 col-lg-10 offset-lg-2 text-start text-lg-end">
-                        <h2 class="h3"><i class="bi bi-telephone-fill me-3 d-lg-none"></i><?php _e("Odpovědný vedoucí", "vitkovice-wp-theme"); ?><i class="bi bi-telephone-fill ms-3 d-none d-lg-inline-block"></i></h2>
+                        <h2 class="h3"><i class="bi bi-telephone-fill me-3 d-lg-none"></i><?php _e("Manager", "vitkovice-wp-theme"); ?><i class="bi bi-telephone-fill ms-3 d-none d-lg-inline-block"></i></h2>
                         John Doe<br/>
                         +420 123 456 789
                     </address>

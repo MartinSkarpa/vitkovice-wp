@@ -4,10 +4,10 @@
 	<section id="" class="py-3 mt-5">
 		<!--TODO Breadcrumbs-->
 
-		<h1><?php _e("Stránka nenalezena", "vitkovice-wp-theme"); ?></h1>
+		<h1><?php _e("Page not found", "vitkovice-wp-theme"); ?></h1>
 
 		<div class="text-justify">
-			<p><?php _e("Jejda! Stránka na kterou se snažíte dostat neexistuje.", "vitkovice-wp-theme"); ?></p>
+			<p><?php _e("Whoops! Page that you are trying to access doesn't exist.", "vitkovice-wp-theme"); ?></p>
             <!--"The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place."-->
 		</div>
 
@@ -16,7 +16,7 @@
 <?php
     get_search_form(
         array(
-            "aria_label" => __("404 nenalezeno", "vitkovice-wp-theme"),
+            "aria_label" => __("404 not found", "vitkovice-wp-theme"),
         )
     );
 ?>
