@@ -1,5 +1,16 @@
 <?php get_header(); ?>
 
+<?php
+// TODO Google map
+// TODO Decide what to do with page.php and single.php
+// TODO Template parts with i18n of index.php
+// TODO Template part of price list
+// TODO Filter search by i18n
+// TODO Show thumbnails or images in posts
+// TODO Hide comments
+// TODO JS/CSS tricks
+?>
+
 <main class="container bg-white">
     <div class="row">
         <section id="sectionAboutUs" class="col-12 py-3 mt-5">
