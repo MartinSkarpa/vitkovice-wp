@@ -1,41 +1,53 @@
 <?php get_header(); ?>
 
 <main class="container bg-white">
-    <section id="" class="py-3 mt-5">
-        <!--TODO Breadcrumbs-->
+    <div class="row">
+        <section id="" class="col-12 py-3 mt-5">
+            <!--TODO Breadcrumbs-->
 
 <?php
-    while (have_posts()) {
+    while ( have_posts() ) {
         the_post();
+
+        if ( has_post_thumbnail() ) {
+?>
+            <style>
+                .the-post-image {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url("<?php echo get_the_post_thumbnail_url(get_the_ID(), "full"); ?>");
+                    height: 200px;
+                }
+            </style>
+            <div class="w-100 the-post-image"></div>
+<?php
+        }
 ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <h1><?php the_title(); ?></h1>
-            <div class="text-justify">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <h1><?php the_title(); ?></h1>
+                <div class="text-justify">
 <?php
         the_content();
 
-        wp_link_pages(
+        /*wp_link_pages(
             array(
-                'before'   => '<nav class="page-links" aria-label="' . /* esc_attr__( 'Page', "vitkovice-wp-theme" ) */ "blah" . '">',
+                'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', "vitkovice-wp-theme" ) . '">',
                 'after'    => '</nav>',
-                /* translators: %: Page number. */
-                'pagelink' => /* esc_html__( 'Page %', "vitkovice-wp-theme" ) */ "blah",
+                'pagelink' => esc_html__( 'Page %', "vitkovice-wp-theme" ),
             )
-        );
+        );*/
 ?>
-            </div>
-        </article>
+                </div>
+            </article>
 
 <?php
-        // If comments are open or there is at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) {
-            comments_template();
-        }
     }
 ?>
 
-    </section>
+        </section>
+    </div>
 </main>
 
 <?php get_footer(); ?>
