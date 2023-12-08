@@ -4,7 +4,7 @@
  Description:   Vítkovice ski school web theme
  Author:        Martin Škarabela
  Author URI:
- Version:       1.0.0
+ Version:       2.0.0
  License:
  License URI:
  Tags:
@@ -13,36 +13,48 @@
 */
 
 :root {
-    --aldrov-primary-100: #000;
-    --aldrov-primary-200: #555;
-    --aldrov-primary-200-rgb: 85, 85, 85;
-    --aldrov-secondary-100: #bbb;
-    --aldrov-secondary-200: #b0b0b0;
-    --aldrov-secondary-300: #a0a0a0;
-    --aldrov-secondary-400: #999;
-    --aldrov-light-100: #fff;
-    --aldrov-light-200: #eee;
+    --aldrov-primary-100: #544c47;
+    --aldrov-primary-100-rgb: 84, 76, 71;
+    --aldrov-primary-200: #7a6b6a;
+    --aldrov-primary-200-rgb: 122, 107, 106;
+    --aldrov-primary-300: #8c7c7a;
+    --aldrov-primary-400: #9a8886;
+    --aldrov-secondary-100: #d7cec1;
+    --aldrov-secondary-100-rgb: 215, 206, 193;
+    --aldrov-secondary-200: #e8ddcf;
+    --aldrov-secondary-200-rgb: 232, 221, 207;
+    --aldrov-secondary-300: #f1e6d8;
+    --aldrov-secondary-400: #fff4e5;
+    --aldrov-light-100: #e9e3dc;
+    --aldrov-dark: #211811;
+    --aldrov-dark-rgb: 33, 24, 17;
 
     --bs-primary: var(--aldrov-primary-100);
-    --bs-secondary: var(--aldrov-secondary-400);
+    --bs-primary-rgb: var(--aldrov-primary-100-rgb);
+    --bs-secondary: var(--aldrov-secondary-100);
+    --bs-secondary-rgb: var(--aldrov-secondary-100-rgb);
+    --bs-dark-rgb: var(--aldrov-dark-rgb);
     --bs-border-radius: 1.5rem;
     --bs-link-color: var(--aldrov-primary-100);
-    --bs-link-hover-color: var(--aldrov-secondary-400);
+    --bs-link-hover-color: var(--aldrov-primary-200);
+    --bs-link-secondary-color: var(--aldrov-secondary-100);
+    --bs-link-secondary-hover-color: var(--aldrov-secondary-200);
 
+    --aldrov-btn-circular-width: 7.25rem;
     --aldrov-box-shadow: 3px 3px 8px 0 rgb(var(--aldrov-primary-200-rgb));
 
     --bs-font-sans-serif: "TT Commons", sans-serif;
-    --bs-body-font-size: 1.25rem;
-    --bs-btn-font-size: 1.25rem;
-    --bs-dropdown-font-size: 1.25rem;
-    --bs-nav-link-font-size: 1.25rem;
+    --bs-body-bg: var(--aldrov-light-100);
+    --bs-body-color: var(--aldrov-dark);
+    --bs-body-font-size: 1.125rem;
+    --bs-nav-link-font-size: 1.125rem;
     --bs-navbar-brand-font-size: 1.5rem;
-    --bs-pagination-font-size: 1.25rem;
+    --bs-pagination-font-size: 1.125rem;
     --bs-tooltip-font-size: 1.225rem;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h1, .h1 {
@@ -51,7 +63,8 @@ h1, .h1 {
 
 .btn {
     --bs-btn-border-radius: 1.5rem;
-    --bs-btn-border-width: 2px;
+    --bs-btn-border-width: 1px;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out, box-shadow .5s ease-in-out;
 }
 
 .btn-outline-primary {
@@ -68,9 +81,42 @@ h1, .h1 {
     --bs-btn-focus-shadow-rgb: var(--aldrov-primary-200-rgb);
 }
 
+.btn-outline-secondary {
+    --bs-btn-color: var(--aldrov-secondary-100);
+    --bs-btn-border-color: var(--aldrov-secondary-100);
+    --bs-btn-hover-color: var(--aldrov-primary-100);
+    --bs-btn-hover-bg: var(--aldrov-secondary-100);
+    --bs-btn-hover-border-color: var(--aldrov-secondary-100);
+    --bs-btn-active-color: var(--aldrov-primary-100);
+    --bs-btn-active-bg: var(--aldrov-secondary-100);
+    --bs-btn-active-border-color: var(--aldrov-secondary-100);
+    --bs-btn-disabled-color: var(--aldrov-secondary-100);
+    --bs-btn-disabled-border-color: var(--aldrov-secondary-100);
+    --bs-btn-focus-shadow-rgb: var(--aldrov-primary-200-rgb);
+}
+
+.btn-circular {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: var(--aldrov-btn-circular-width);
+    justify-content: center;
+    width: var(--aldrov-btn-circular-width);
+}
+
+.bg-dark a[href],
+.link-secondary {
+    color: var(--bs-link-secondary-color) !important;
+}
+
+.bg-dark a[href]:focus, .bg-dark a[href]:hover,
+.link-secondary:focus, .link-secondary:hover {
+    color: var(--bs-link-secondary-hover-color) !important;
+}
+
 .form-control {
     border-radius: 1.5rem;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .form-control:focus {
@@ -86,23 +132,44 @@ h1, .h1 {
 }
 
 .card {
-    --bs-card-border-radius: 1.5rem;
-    --bs-card-inner-border-radius: 1.5rem;
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
     --bs-card-border-width: 0;
     --bs-card-cap-padding-y: 1rem;
-    box-shadow: var(--aldrov-box-shadow);
+    /*box-shadow: var(--aldrov-box-shadow);*/
+}
+
+.table-primary {
+    --bs-table-bg: var(--aldrov-primary-100);
+    --bs-table-border-color: var(--aldrov-primary-400);
+    --bs-table-striped-bg: var(--aldrov-primary-200);
+    --bs-table-striped-color: var(--aldrov-light-100);
+    --bs-table-active-bg: var(--aldrov-primary-400);
+    --bs-table-active-color: var(--aldrov-light-100);
+    --bs-table-hover-bg: var(--aldrov-primary-300);
+    --bs-table-hover-color: var(--aldrov-light-100);
 }
 
 .table-secondary {
     --bs-table-bg: var(--aldrov-secondary-100);
     --bs-table-border-color: var(--aldrov-secondary-400);
     --bs-table-striped-bg: var(--aldrov-secondary-200);
+    --bs-table-striped-color: var(--aldrov-primary-100);
     --bs-table-active-bg: var(--aldrov-secondary-400);
+    --bs-table-active-color: var(--aldrov-primary-100);
     --bs-table-hover-bg: var(--aldrov-secondary-300);
+    --bs-table-hover-color: var(--aldrov-primary-100);
 }
 
-.wp-block-table thead th {
-    background-color: var(--aldrov-secondary-200);
+section.bg-dark .wp-block-table thead th {
+    background-color: var(--aldrov-secondary-100);
+}
+section:not(.bg-dark) .wp-block-table thead th {
+    background-color: var(--aldrov-primary-100);
+    color: var(--aldrov-light-100);
+}
+.wp-block-table thead {
+    border-bottom: 0;
 }
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
     background-color: rgba(0, 0, 0, .1);
@@ -111,6 +178,8 @@ h1, .h1 {
 .nav-link {
     /*--bs-nav-link-color: var(--aldrov-light-200);*/
     --bs-nav-link-hover-color: var(--aldrov-light-100);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .nav-item::after {
@@ -126,12 +195,49 @@ h1, .h1 {
     width: 100%
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    --bs-navbar-nav-link-padding-x: 1.5rem;
+.navbar-nav .dropdown-item {
+    text-transform: uppercase;
 }
 
-.section-secondary {
-    background-color: rgba(var(--bs-light-rgb), .8);
+.navbar-nav {
+    --bs-nav-link-padding-x: 1rem;
+    align-items: center;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.navbar-toggler {
+    --bs-navbar-toggler-border-color: transparent;
+    --bs-navbar-toggler-padding-x: .5rem;
+    --bs-navbar-toggler-padding-y: .5rem;
+    border-radius: 50%;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.navbar-toggler:active, .navbar-toggler:focus, .navbar-toggler:hover {
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
+#formSearch .inputSearch {
+    color: var(--aldrov-secondary-100);
+    transition: max-width 400ms;
+}
+
+#formSearch .inputSearch::placeholder {
+    color: var(--aldrov-secondary-100);
+}
+
+@media (min-width: 1200px) {
+    #formSearch .inputSearch {
+        max-width: 10px;
+    }
+
+    #formSearch .inputSearch:focus,
+    #formSearch .inputSearch:hover {
+        max-width: 150px;
+    }
 }
 
 .text-justify {
@@ -139,7 +245,7 @@ h1, .h1 {
 }
 
 .section-top {
-    margin-top: 100px;
+    margin-top: 76px;
 }
 
 .font-xs {
@@ -164,4 +270,23 @@ h1, .h1 {
 
 .phone-number > span:not(:last-of-type) {
     margin-inline-end: .25rem;
+}
+
+.appearable {
+    opacity: 0;
+    transform: translateX(-25%);
+    transition: opacity .5s ease-in, transform .5s ease-in;
+}
+
+.appearable.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.height-200px {
+    height: 200px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
 }

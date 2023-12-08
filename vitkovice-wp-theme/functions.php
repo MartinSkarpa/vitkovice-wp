@@ -3,14 +3,15 @@ const _ROOT_DIR = "/vitkovice-wp-theme";
 const _ROOT_URL = "/vitkovice";
 
 // Category names
-const _NEWS        = "news";
 const _INSTRUCTORS = "instructors";
+const _NEWS        = "news";
 
 // Main content post prefixes
 const _POST_ABOUT_US    = "_POST_ABOUT_US_";
-const _POST_KIDS_PARK   = "_POST_KIDS_PARK_";
 const _POST_INSTRUCTORS = "_POST_INSTRUCTORS_";
+const _POST_KIDS_PARK   = "_POST_KIDS_PARK_";
 const _POST_PRICING     = "_POST_PRICING_";
+const _POST_RENTAL      = "_POST_RENTAL_";
 
 // i18n
 const _LANG_SHORTCUTS = [
