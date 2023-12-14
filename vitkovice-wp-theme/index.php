@@ -223,7 +223,7 @@
               <h2 class="h3 text-secondary"><i class="bi bi-telephone-fill me-3"></i><?php _e("Manager", "vitkovice-wp-theme"); ?></h2>
               Václav Liška<br/>
               <span class="phone-number">
-                <span>+420</span><span>773</span><span>631</span><span>723</span>
+                <span>+420</span><span>775</span><span>244</span><span>556</span>
               </span>
             </address>
             <div id="socialMediaContainer" class="col-12 col-lg-10 offset-lg-2 text-start text-lg-end mb-3">
