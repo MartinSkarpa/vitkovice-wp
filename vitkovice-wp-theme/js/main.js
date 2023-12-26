@@ -3,6 +3,7 @@
 initScroll();
 showContactEmail();
 initMap();
+initEventHandlers();
 
 function initMap() {
   try {
@@ -67,4 +68,22 @@ function createMap() {
 
   const marker = new SMap.Marker(address, "aldrovSnowsports", {title: "Aldrov Snowsports"});
   layer.addMarker(marker);
+}
+
+function initEventHandlers() {
+  const revealableList = document.querySelectorAll(".revealable");
+
+  revealableList.forEach(item => {
+    const btnReveal = item.querySelector(".btn-reveal");
+
+    btnReveal.addEventListener("click", () => {
+      const btnRevealContainer = item.querySelector(".btn-reveal-container");
+
+      btnRevealContainer.classList.add("reveal");
+      setTimeout(() => btnRevealContainer.classList.add("d-none"), 500);
+
+      item.classList.add("reveal");
+      item.style.height = `${item.scrollHeight}px`;
+    });
+  });
 }

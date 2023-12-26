@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: vitkovice-wp-theme\n"
-"POT-Creation-Date: 2023-12-08 09:23+0100\n"
-"PO-Revision-Date: 2023-12-08 09:26+0100\n"
+"POT-Creation-Date: 2023-12-26 01:45+0100\n"
+"PO-Revision-Date: 2023-12-26 01:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -59,32 +59,36 @@ msgstr "Kontakt"
 msgid "Home"
 msgstr "Home"
 
-#: index.php:67
+#: index.php:62
+msgid "More"
+msgstr "Více"
+
+#: index.php:72
 msgid "Rental & service"
 msgstr "Půjčovna & servis"
 
-#: index.php:106 page-news-archive.php:37 search.php:57
+#: index.php:111 page-news-archive.php:37 search.php:57
 msgid "Read more...."
 msgstr "Číst dále...."
 
-#: index.php:115 index.php:185 page-all-instructors.php:46
+#: index.php:120 index.php:190 page-all-instructors.php:46
 #: page-news-archive.php:72 search.php:67
 msgid "No content found."
 msgstr "Nebyl nalezen žádný obsah."
 
-#: index.php:121
+#: index.php:126
 msgid "Older posts"
 msgstr "Starší příspěvky"
 
-#: index.php:176 page-all-instructors.php:37
+#: index.php:181 page-all-instructors.php:37
 msgid "Into the profile >>"
 msgstr "Přejít do profilu >>"
 
-#: index.php:190
+#: index.php:195
 msgid "Other instructors"
 msgstr "Další instruktoři"
 
-#: index.php:207
+#: index.php:212
 msgid ""
 "You can find our office 100m from the top station of the Jizerka lift in the "
 "area of ALDROV RESORT. Our ski kindergarten for children or complete "
@@ -94,23 +98,23 @@ msgstr ""
 "RESORT. Náš dětský park pro nejmenší či úplné začátečníky je hned vedle "
 "snowparku FREESTYLE AREA VÍTKOVICE."
 
-#: index.php:212
+#: index.php:217
 msgid "Opening Times"
 msgstr "Otevírací doba"
 
-#: index.php:213
+#: index.php:218
 msgid "Office opening Times"
 msgstr "Otevírací doba kanceláře"
 
-#: index.php:214
+#: index.php:219
 msgid "Teaching time"
 msgstr "Vyučovací doba"
 
-#: index.php:217
+#: index.php:222
 msgid "Address"
 msgstr "Adresa"
 
-#: index.php:223
+#: index.php:228
 msgid "Manager"
 msgstr "Odpovědný vedoucí"
 

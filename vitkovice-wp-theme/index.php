@@ -49,13 +49,18 @@
   </section>
   <section id="sectionPricing" class="col-12 px-0 py-3 ">
     <div class="container">
-      <div class="row">
+      <div class="row revealable">
         <div class="col-12">
           <!--<h1 class="text-center appearable"><?php /* _e("Price list", "vitkovice-wp-theme"); */ ?></h1>-->
 <?php
   $pricing_post = get_post_by_name( _POST_PRICING . determine_locale() );
   echo $pricing_post->post_content;
 ?>
+        </div>
+        <div class="w-100 btn-reveal-container">
+          <button class="btn btn-outline-primary btn-circular btn-reveal">
+            <?php _e("More", "vitkovice-wp-theme"); ?>
+          </button>
         </div>
       </div>
     </div>
