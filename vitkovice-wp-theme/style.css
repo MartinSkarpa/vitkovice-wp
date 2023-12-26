@@ -230,17 +230,6 @@ section:not(.bg-dark) .wp-block-table thead th {
     color: var(--aldrov-secondary-100);
 }
 
-@media (min-width: 1200px) {
-    #formSearch .inputSearch {
-        max-width: 10px;
-    }
-
-    #formSearch .inputSearch:focus,
-    #formSearch .inputSearch:hover {
-        max-width: 150px;
-    }
-}
-
 .text-justify {
     text-align: justify;
 }
@@ -285,7 +274,7 @@ section:not(.bg-dark) .wp-block-table thead th {
 }
 
 .revealable {
-    height: 500px;
+    height: 600px;
     overflow-y: hidden;
     position: relative;
     transition: height .5s ease-in;
@@ -316,4 +305,40 @@ section:not(.bg-dark) .wp-block-table thead th {
 
 .object-fit-cover {
     object-fit: cover;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .revealable {
+        height: 550px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .revealable {
+        height: 500px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #formSearch .inputSearch {
+        max-width: 10px;
+    }
+
+    #formSearch .inputSearch:focus,
+    #formSearch .inputSearch:hover {
+        max-width: 150px;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
 }
