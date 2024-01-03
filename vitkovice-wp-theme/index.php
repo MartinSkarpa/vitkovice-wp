@@ -15,7 +15,7 @@
           <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_1.jpeg" class="d-block w-100" alt="Slide one"/>
         </div>
         <div class="carousel-item">
-          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_2.jpg" class="d-block w-100" alt="Slide two"/>
+          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_2.jpeg" class="d-block w-100" alt="Slide two"/>
         </div>
         <div class="carousel-item">
           <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_3.jpeg" class="d-block w-100" alt="Slide three"/>
