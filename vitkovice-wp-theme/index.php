@@ -20,6 +20,9 @@
         <div class="carousel-item">
           <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_3.jpg" class="d-block w-100" alt="Slide three"/>
         </div>
+        <div class="carousel-item">
+          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_4.jpeg" class="d-block w-100" alt="Slide four"/>
+        </div>
       </div>
     </div>
     <div class="container">
