@@ -12,13 +12,13 @@
     <div class="carousel carousel-fade slide mb-3">
       <div class="carousel-inner" data-bs-ride="carousel">
         <div class="carousel-item active">
-          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_1.jpg" class="d-block w-100" alt="Slide one"/>
+          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_1.jpeg" class="d-block w-100" alt="Slide one"/>
         </div>
         <div class="carousel-item">
           <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_2.jpg" class="d-block w-100" alt="Slide two"/>
         </div>
         <div class="carousel-item">
-          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_3.jpg" class="d-block w-100" alt="Slide three"/>
+          <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_3.jpeg" class="d-block w-100" alt="Slide three"/>
         </div>
         <div class="carousel-item">
           <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/aldrov_carousel_4.jpeg" class="d-block w-100" alt="Slide four"/>
