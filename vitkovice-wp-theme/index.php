@@ -60,7 +60,7 @@
   echo $pricing_post->post_content;
 ?>
         </div>
-        <div class="w-100 btn-reveal-container">
+        <div class="w-100 btn-reveal-container btn-reveal-container-primary">
           <button class="btn btn-outline-primary btn-circular btn-reveal">
             <?php _e("More", "vitkovice-wp-theme"); ?>
           </button>
@@ -70,13 +70,18 @@
   </section>
   <section id="sectionRental" class="col-12 px-0 py-3 bg-dark bg-opacity-75 text-white">
     <div class="container">
-      <div class="row">
+      <div class="row revealable">
         <div class="col-12">
           <!--<h1 class="text-center appearable"><?php _e("Rental & service", "vitkovice-wp-theme"); ?></h1>-->
 <?php
   $rental_post = get_post_by_name( _POST_RENTAL . determine_locale() );
   echo $rental_post->post_content;
 ?>
+        </div>
+        <div class="w-100 btn-reveal-container btn-reveal-container-secondary">
+          <button class="btn btn-outline-secondary btn-circular btn-reveal">
+            <?php _e("More", "vitkovice-wp-theme"); ?>
+          </button>
         </div>
       </div>
     </div>

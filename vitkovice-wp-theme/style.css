@@ -40,6 +40,7 @@
     --bs-link-hover-color: var(--aldrov-primary-200);
     --bs-link-secondary-color: var(--aldrov-secondary-100);
     --bs-link-secondary-hover-color: var(--aldrov-secondary-200);
+    --section-bg-dark-rgb: 83, 75, 68;
 
     --aldrov-btn-circular-width: 7.25rem;
     --aldrov-box-shadow: 3px 3px 8px 0 rgb(var(--aldrov-primary-200-rgb));
@@ -282,13 +283,20 @@ section:not(.bg-dark) .wp-block-table thead th {
 
 .btn-reveal-container {
     align-items: end;
-    background-image: linear-gradient(to bottom, rgba(var(--aldrov-light-100-rgb), 0), rgba(var(--aldrov-light-100-rgb), 1) 70px);
     bottom: 0;
     display: flex;
     justify-content: center;
     height: 200px;
     position: absolute;
     transition: opacity .5s ease-in;
+}
+
+.btn-reveal-container-primary {
+    background-image: linear-gradient(to bottom, rgba(var(--aldrov-light-100-rgb), 0), rgba(var(--aldrov-light-100-rgb), 1) 70px);
+}
+
+.btn-reveal-container-secondary {
+    background-image: linear-gradient(to bottom, rgba(var(--aldrov-light-100-rgb), 0), rgba(var(--section-bg-dark-rgb), 1) 70px);
 }
 
 .btn-reveal-container.reveal {
