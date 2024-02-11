@@ -229,6 +229,7 @@
             <address class="col-12 col-lg-10 offset-lg-2 text-start text-lg-end">
               <h2 class="h3 text-secondary"><i class="bi bi-geo-alt-fill me-3 d-lg-none"></i><?php _e("Address", "vitkovice-wp-theme"); ?><i class="bi bi-geo-alt-fill ms-3 d-none d-lg-inline-block"></i></h2>
               Aldrov Resort<br/>
+              Vítkovice 445<br/>
               Vítkovice v Krkonoších<br/>
               512 38
             </address>
