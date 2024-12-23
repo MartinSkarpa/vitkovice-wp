@@ -235,7 +235,7 @@
             </address>
             <address class="col-12">
               <h2 class="h3 text-secondary"><i class="bi bi-telephone-fill me-3"></i><?php _e("Manager", "vitkovice-wp-theme"); ?></h2>
-              Václav Liška<br/>
+              Martin Poppr<br/>
               <span class="phone-number">
                 <span>+420</span><span>775</span><span>244</span><span>556</span>
               </span>
