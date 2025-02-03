@@ -245,7 +245,7 @@
               <a href="https://www.instagram.com/aldrov.snow/" class="link-secondary" target="_blank"><i class="bi bi-instagram"></i></a>
             </div>
             <div class="col-12 font-xs">
-              ALDROV SNOWSPORTS SCHOOL, s.r.o.<br/>
+              ALDROV SNOWSPORTS SCHOOL s.r.o.<br/>
               Zámecká 2, 543 01 Vrchlabí IČO: 177 10 294<br/>
               Společnost zapsaná u Krajského soudu v Hradci Králové pod sp. zn. C 50262.
             </div>
